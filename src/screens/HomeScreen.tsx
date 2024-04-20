@@ -43,10 +43,11 @@ function HomeScreen(): React.JSX.Element {
 const styles = StyleSheet.create({
   title: {
     textAlign: 'center',
-    fontSize: 25,
-    padding: 10,
+    fontSize: 24,
+    fontWeight: '600',
+    padding: 5,
     color: 'black',
-    backgroundColor: 'white',
+    // backgroundColor: 'white',
   },
 });
 

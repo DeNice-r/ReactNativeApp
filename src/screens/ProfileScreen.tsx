@@ -4,8 +4,9 @@ import LabeledInput from '../components/LabeledInput';
 
 function ProfileScreen(): React.JSX.Element {
   const [user, setUser] = useState({
-    mail: '',
+    email: '',
     password: '',
+    password_repeat: '',
     surname: '',
     name: '',
   });
@@ -17,12 +18,18 @@ function ProfileScreen(): React.JSX.Element {
   const handleButtonPress = () => {
     Alert.alert(
       'Реєстрація',
-      `Ім'я: ${user.name}\nПрізвище: ${user.surname}\nЕлектронна пошта: ${user.mail}\nПароль: ${user.password}`,
+      `Ім'я: ${user.name}\nПрізвище: ${user.surname}\nЕлектронна пошта: ${user.email}\nПароль: ${user.password}`,
       [
         {
           text: 'OK',
           onPress: () =>
-            setUser({mail: '', password: '', surname: '', name: ''}),
+            setUser({
+              email: '',
+              password: '',
+              password_repeat: '',
+              surname: '',
+              name: '',
+            }),
         },
         {text: 'Відміна'},
       ],
@@ -34,7 +41,7 @@ function ProfileScreen(): React.JSX.Element {
       <Text style={styles.title}>Реєстрація</Text>
       <LabeledInput
         label="Електронна пошта"
-        value={user.mail}
+        value={user.email}
         keyboardType="email-address"
         onChangeText={e => handleInputChange('mail', e)}
       />
@@ -46,9 +53,9 @@ function ProfileScreen(): React.JSX.Element {
       />
       <LabeledInput
         label="Пароль (ще раз)"
-        value={user.password}
+        value={user.password_repeat}
         secureTextEntry
-        onChangeText={e => handleInputChange('password', e)}
+        onChangeText={e => handleInputChange('password_repeat', e)}
       />
       <LabeledInput
         label="Прізвище"

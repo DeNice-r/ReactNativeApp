@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     flex: 3,
     fontSize: 20,
     fontWeight: 'bold',
-    color: 'black',
+    color: '#505050',
     textAlign: 'center',
   },
 });

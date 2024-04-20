@@ -17,7 +17,7 @@ function GalleryScreen(): React.JSX.Element {
     const fetchNews = async () => {
       try {
         const response = await axios.get(
-          'https://api.github.com/repos/ipzk211lvv/news/contents/image',
+          'https://api.github.com/repos/DeNice-r/ReactNativeApp/contents/data/image',
         );
         setPhotographs(response.data);
       } catch (error) {
@@ -62,15 +62,15 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    padding: 15,
+    padding: 10,
   },
   square: {
     backgroundColor: 'white',
     borderRadius: 3,
-    width: width / 2 - 20,
+    width: width / 2 - 15,
     height: width / 3 - 20,
-    marginBottom: 10,
-    elevation: 7,
+    marginBottom: 7,
+    elevation: 4,
     alignItems: 'center',
     justifyContent: 'center',
   },

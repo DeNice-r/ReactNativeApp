@@ -30,10 +30,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: 'white',
     padding: 5,
+    marginLeft: 10,
+    marginRight: 10,
+    borderRadius: 10,
+    marginBottom: 10,
   },
   postImage: {
-    flex: 1,
-    padding: 10,
+    flex: 0.5,
+    padding: 15,
+    paddingLeft: 20,
+    borderRadius: 5,
   },
   text: {
     flex: 4,
@@ -51,5 +57,4 @@ const styles = StyleSheet.create({
     color: 'black',
   },
 });
-
 export default PostItem;
